@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+        <title>Compras!</title>
+    </head>
+    <body>
+        
+        <div class="container">
+
+            <div class="form-group">
+                <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-cart-arrow-down fa-3x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-shopping-cart fa-3x"></i></a>
+                    </li>
+                </ul>
+            </div>
+            
+                        
+            <div class="tab-content" id="myTabContent">
+          
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  
+                    <form method="post">
+                        
+                        <div class="form-row">
+                            
+                            <div class="input-group mb-2">
+                                <!--  <label for="exampleInputEmail1">Producto:   :</label> -->
+                                <input name="bar_txt" type="text" class="form-control" id="myInput" placeholder="Producto" autocomplete="off" required autofocus>
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" ><i class="fas fa-coffee"></i></div>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group mb-2">
+                                <input name="pric_txt" type="number" step="0.01" class="form-control" id="inputPrice" placeholder="Precio" required>
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-money-bill-alt"></i></div>
+                                </div>
+                            </div>
+                            
+                             <div class="input-group mb-2">
+                                <input name="qty_num" type="number" step="0.01" class="form-control" id="inputQty" placeholder="Cantidad" required>
+                                 <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-tablets"></i></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <button name="insert" type="submit" class="btn btn-primary btn-lg btn-block"><i class="fas fa-cart-plus fa-2x"></i></button>
+                        </div>
+                        
+                    </form>
+
+                    
+                    
+                                        
+                    
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <strong>Última compra:</strong><br/>
+                        2 | <strong>Leche en polvo La Selecta</strong> | C$1,000.00                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                
+                    <div class="alert alert-primary" role="alert">
+                        <h4 align="center" style="font-weight:bold">Total: C$
+                            1,706.90                        </h4>
+                    </div>
+                    
+                                        
+                    
+                </div>
+  
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    
+                                        
+                                    
+                        <table class="table table-responsive">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cant.</th>
+                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Borrar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Leche Eskimo 900ml</td>
+                                    <td>C$25.50</td>
+                                    <td>6</td>
+                                    <td>C$153.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="1"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Leche Eskimo 900ml</td>
+                                    <td>C$34.00</td>
+                                    <td>2</td>
+                                    <td>C$68.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="2"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Frijoles a granel</td>
+                                    <td>C$25.60</td>
+                                    <td>4</td>
+                                    <td>C$102.40</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="3"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Arroz a granel LB</td>
+                                    <td>C$2.00</td>
+                                    <td>5</td>
+                                    <td>C$10.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="4"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Yoghurt Eskimo 150g</td>
+                                    <td>C$25.00</td>
+                                    <td>2.2</td>
+                                    <td>C$55.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="5"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Arroz a granel LB</td>
+                                    <td>C$25.50</td>
+                                    <td>2</td>
+                                    <td>C$51.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="6"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>Arroz a granel LB</td>
+                                    <td>C$22.50</td>
+                                    <td>2</td>
+                                    <td>C$45.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="7"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>Azúcar a granel LB</td>
+                                    <td>C$105.00</td>
+                                    <td>2</td>
+                                    <td>C$210.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="8"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>Plastilina Crayola 136g</td>
+                                    <td>C$25.00</td>
+                                    <td>0.5</td>
+                                    <td>C$12.50</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="9"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>Leche en polvo La Selecta</td>
+                                    <td>C$500.00</td>
+                                    <td>2</td>
+                                    <td>C$1,000.00</td>
+                                    <th scope="row">
+                                        <form method="post">
+                                            <input name="row_id" type="hidden" value="10"/>
+                                            <button type="submit" name="delete" class="btn btn-link" onclick="return confirm('¿Está seguro que desea remover del carrito?')"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </th>
+                                </tr>
+                                                            </tbody>
+                        </table>
+                        
+                        <div class="alert alert-primary" role="alert">
+                            <h4 align="center" style="font-weight:bold">Total: C$
+                                1,706.90                            </h4>
+                        </div>
+                        
+                        
+                    
+                    
+                    
+                    <form method="post">
+                        <div class="form-group">
+                            <label style="font-weight:bold">Limpiar: </label>
+                            <button name="clean" type="submit" type="submit" class="btn btn-link" onclick="return confirm('¿Está seguro que desea vaciar el carrito?')"><i class="fas fa-broom"></i></button>
+                        </div>
+                    </form>
+                    
+                    
+                                        
+                </div>
+                
+                <!-- end div myTabContent-->
+                
+            </div>
+            
+            <footer class="text-muted">
+                <p align="center"><a href="#"><i class="fas fa-sort-up fa-2x"></i></a></p>
+            </footer>
+
+          
+           
+
+            </div>
+
+         <!-- Optional JavaScript -->
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+         
+
+    </body>
+</html>
+
+
